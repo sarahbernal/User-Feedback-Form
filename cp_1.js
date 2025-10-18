@@ -1,6 +1,8 @@
 // Character count with Input()
 commentsInput.addEventListener("input", () => {
-    console.log("Characters:", commentsInput.value.length);
+    const count = commentsInput.value.length;
+    document.getElementById("charCount").textContent = `Comment characters: ${count}`
+    console.log("Comment characters:", commentsInput.value.length);
 })
 
 // Display tooltip with mouseover()
@@ -28,5 +30,10 @@ document.querySelector("#submitBtn").addEventListener("click", (event) => {
     } else {
         alert("Form submitted successfully!");
     }
+    // Feedback display
+    const feedback = document.createElement("p");
+    feedback.textContent = `Thank you, ${nameValue}! Your feedback has been submitted.`;
+    document.querySelector("#feedback-display").appendChild(feedback);
 });
+
 

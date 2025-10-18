@@ -9,12 +9,16 @@
 </head>
 <body>
     <form id="feedbackForm">
-        <input id="nameInput" type="text" placeholder="Your username">
-        <input id= "emailInput" type="text" placeholder="Your email">
+        <input id="nameInput" type="text" placeholder="Username">
+        <input id= "emailInput" type="text" placeholder="Email">
         <p id="tooltip" style="display:none; color: gray;">Enter a valid email address</p>
-        <textarea name="Place any comments here..." id="commentsInput" rows="5"></textarea>
+        <textarea placeholder="Place any comments here..." id="commentsInput" rows="5"></textarea>
+        <p id="charCount">Comment characters: 0</p>
         <button id="submitBtn" type="submit">Submit</button>
     </form>
+
+    <div id="feedback-display"></div>
+
     <script src="cp_1.js"></script>
 </body>
 </html>
