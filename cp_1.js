@@ -3,7 +3,7 @@ commentsInput.addEventListener("input", () => {
     const count = commentsInput.value.length;
     document.getElementById("charCount").textContent = `Comment characters: ${count}`
     console.log("Comment characters:", commentsInput.value.length);
-})
+});
 
 // Display tooltip with mouseover()
 const emailInput = document.getElementById("emailInput");
@@ -16,8 +16,8 @@ function hideTooltip(){
     tooltip.style.display = "none";
 }
 
-emailInput.addEventListener("mouseover", () => showTooltip())
-emailInput.addEventListener("mouseout", ()=> hideTooltip())
+emailInput.addEventListener("mouseover", () => showTooltip());
+emailInput.addEventListener("mouseout", ()=> hideTooltip());
 
 // Prevent submission if empty field
 document.querySelector("#submitBtn").addEventListener("click", (event) => {
@@ -36,4 +36,11 @@ document.querySelector("#submitBtn").addEventListener("click", (event) => {
     document.querySelector("#feedback-display").appendChild(feedback);
 });
 
+// Event bubbling and delegation
+document.querySelector("#feedbackForm").addEventListener("click", (event) =>{
+    event.stopPropagation();
+    if(event.target.matches("input, textarea")){
+        console.log("Input field:", event.target.id);
+    }
+});
 
