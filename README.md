@@ -1,0 +1,1 @@
+In this challenge, I designed an interactive form that captures user input using DOM manipulation, event handlers, bubbling and delegation, mouse movement events, and keyboard events to build a responsive feedback tool.
